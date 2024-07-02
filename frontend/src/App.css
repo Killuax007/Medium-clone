@@ -1,0 +1,16 @@
+/* eslint-disabled */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Gtsuper";
+  src: url("../fonts/GT-Super-Text-Book-Trial.otf");
+}
+@font-face {
+  font-family: "sohne";
+  src: url("../public/fonts/Lato-LightItalic.ttf");
+}
+@font-face {
+  font-family: "cursive";
+  src: url("../public/fonts/Cedarville-Cursive.ttf");
+}

@@ -1,0 +1,30 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+model User {
+id         Int   @id @default(autoincrement())
+email      String   @unique
+name       String?
+password   String
+blogs      Blog[]
+}
+model Blog{
+id        Int   @id @default(autoincrement())
+title     String
+content   String
+published Boolean  @default(false)
+author    User     @relation(fields: [authorld],references: [id])
+authorld  Int
+
+}
+
+
+
+// postgresql://Test_owner:ErUb31NYSdJs@ep-misty-cake-a1rjqyf9.ap-southeast-1.aws.neon.tech/Test?sslmode=require
